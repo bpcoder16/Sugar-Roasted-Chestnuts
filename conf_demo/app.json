@@ -9,7 +9,8 @@
   "filterValues": [
     "bpcoder"
   ],
-  "DefaultMySQLSupport": false,
+  "DefaultMySQLSupport": true,
+  "DefaultClickhouseSupport": true,
   "DefaultRedisSupport": true,
   "AliyunOSSSupport": true
 }

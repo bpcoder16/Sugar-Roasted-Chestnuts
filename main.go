@@ -26,4 +26,5 @@ func main() {
 	//redistest.MultipleTest(ctx)
 
 	clickhousetest.Test(ctx)
+	//clickhousetest.MultipleTest(ctx)
 }
