@@ -19,8 +19,8 @@ func main() {
 
 	//logtest.Test(ctx)
 
-	mysqltest.Test(ctx)
-	//mysqltest.MultipleTest(ctx)
+	//mysqltest.Test(ctx)
+	mysqltest.MultipleTest(ctx)
 
 	//redistest.Test(ctx)
 }
