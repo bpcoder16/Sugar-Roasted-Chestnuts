@@ -2,7 +2,7 @@ package main
 
 import (
 	"Sugar-Roasted-Chestnuts/bootstrap"
-	"Sugar-Roasted-Chestnuts/services/redistest"
+	"Sugar-Roasted-Chestnuts/services/clickhousetest"
 	"context"
 	"github.com/bpcoder16/Chestnut/modules/appconfig"
 )
@@ -22,6 +22,8 @@ func main() {
 	//mysqltest.Test(ctx)
 	//mysqltest.MultipleTest(ctx)
 
-	redistest.Test(ctx)
-	redistest.MultipleTest(ctx)
+	//redistest.Test(ctx)
+	//redistest.MultipleTest(ctx)
+
+	clickhousetest.Test(ctx)
 }

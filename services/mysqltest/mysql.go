@@ -12,7 +12,7 @@ import (
 func Test(ctx context.Context) {
 	mysql.MasterDB().WithContext(ctx).Create(&db.Test{
 		Content: utils.RandIntStr(16),
-		Status:  &db.TestStatusDefault,
+		Status:  db.TestStatusDefault,
 	})
 
 	var test db.Test
@@ -31,11 +31,11 @@ func Test(ctx context.Context) {
 func MultipleTest(ctx context.Context) {
 	SMySQL.Test01MasterDB().WithContext(ctx).Create(&db.Test{
 		Content: utils.RandIntStr(16),
-		Status:  &db.TestStatusDefault,
+		Status:  db.TestStatusDefault,
 	})
 	SMySQL.Test02MasterDB().WithContext(ctx).Create(&db.Test{
 		Content: utils.RandIntStr(18),
-		Status:  &db.TestStatusDefault,
+		Status:  db.TestStatusDefault,
 	})
 
 	var test01 db.Test
