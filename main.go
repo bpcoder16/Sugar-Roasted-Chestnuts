@@ -1,6 +1,7 @@
 package main
 
 import (
+	"Sugar-Roasted-Chestnuts/bootstrap"
 	"context"
 	"encoding/json"
 	"fmt"
@@ -13,6 +14,8 @@ func main() {
 
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
+
+	bootstrap.MustInit(ctx, config)
 
 	fmt.Println(ctx)
 
