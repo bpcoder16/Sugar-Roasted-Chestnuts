@@ -10,6 +10,6 @@
     "bpcoder"
   ],
   "DefaultMySQLSupport": false,
-  "RedisSupport": true,
+  "DefaultRedisSupport": true,
   "AliyunOSSSupport": true
 }
