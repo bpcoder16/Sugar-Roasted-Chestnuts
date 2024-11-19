@@ -2,7 +2,7 @@ package main
 
 import (
 	"Sugar-Roasted-Chestnuts/bootstrap"
-	"Sugar-Roasted-Chestnuts/services/mongodbtest"
+	"Sugar-Roasted-Chestnuts/services/aliyun"
 	"context"
 	"github.com/bpcoder16/Chestnut/modules/appconfig"
 )
@@ -28,6 +28,8 @@ func main() {
 	//clickhousetest.Test(ctx)
 	//clickhousetest.MultipleTest(ctx)
 
-	mongodbtest.Test(ctx)
+	//mongodbtest.Test(ctx)
 	//mongodbtest.MultipleTest(ctx)
+
+	aliyun.ImageTransferTest(ctx)
 }
