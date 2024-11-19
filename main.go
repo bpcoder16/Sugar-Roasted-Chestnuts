@@ -2,7 +2,7 @@ package main
 
 import (
 	"Sugar-Roasted-Chestnuts/bootstrap"
-	"Sugar-Roasted-Chestnuts/services/clickhousetest"
+	"Sugar-Roasted-Chestnuts/services/mongodbtest"
 	"context"
 	"github.com/bpcoder16/Chestnut/modules/appconfig"
 )
@@ -25,6 +25,9 @@ func main() {
 	//redistest.Test(ctx)
 	//redistest.MultipleTest(ctx)
 
-	clickhousetest.Test(ctx)
+	//clickhousetest.Test(ctx)
 	//clickhousetest.MultipleTest(ctx)
+
+	mongodbtest.Test(ctx)
+	//mongodbtest.MultipleTest(ctx)
 }
