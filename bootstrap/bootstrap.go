@@ -15,11 +15,13 @@ import (
 )
 
 func MustInit(ctx context.Context, config *appconfig.AppConfig) {
-	bootstrap.MustInit(ctx, config,
-		initMultipleMySQL,
-		initMultipleRedis,
-		initMultipleClickhouse,
-		initMultipleMongoDB,
+	bootstrap.MustInit(
+		ctx,
+		config,
+		//initMultipleMySQL,
+		//initMultipleRedis,
+		//initMultipleClickhouse,
+		//initMultipleMongoDB,
 	)
 }
 
