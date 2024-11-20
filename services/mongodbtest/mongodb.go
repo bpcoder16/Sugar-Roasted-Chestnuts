@@ -21,7 +21,7 @@ func Test(ctx context.Context) {
 	cursor, err := mongodb.DefaultClient().Collection("xxx").Find(
 		ctx,
 		filter,
-		options.Find().SetSort(bson.D{{"_id", 1}}).SetLimit(5),
+		options.Find().SetSort(bson.D{{"_id", 1}}).SetLimit(2),
 	)
 	defer func() {
 		_ = cursor.Close(ctx)

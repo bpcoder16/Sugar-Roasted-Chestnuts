@@ -36,4 +36,8 @@ func registerServices() {
 	cmd.RegisterService(&services.DefaultClickhouse{})
 	// 测试 Chestnut 基础库对应的多 Clickhouse 实例功能
 	cmd.RegisterService(&services.MultipleClickhouse{})
+	// 测试 Chestnut 基础库对应的默认 DefaultMongoDB 模块
+	cmd.RegisterService(&services.DefaultMongoDB{})
+	// 测试 Chestnut 基础库对应的多 MongoDB 实例功能
+	cmd.RegisterService(&services.MultipleMongoDB{})
 }

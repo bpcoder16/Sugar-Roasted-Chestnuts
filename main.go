@@ -15,11 +15,5 @@ func main() {
 
 	bootstrap.MustInit(ctx, config)
 
-	//clickhousetest.Test(ctx)
-	//clickhousetest.MultipleTest(ctx)
-
-	//mongodbtest.Test(ctx)
-	//mongodbtest.MultipleTest(ctx)
-
 	aliyun.ImageTransferTest(ctx)
 }

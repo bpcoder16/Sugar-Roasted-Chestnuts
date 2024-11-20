@@ -15,7 +15,12 @@ import (
 )
 
 func MustInit(ctx context.Context, config *appconfig.AppConfig) {
-	bootstrap.MustInit(ctx, config, initMultipleMySQL, initMultipleRedis, initMultipleClickhouse)
+	bootstrap.MustInit(ctx, config,
+		initMultipleMySQL,
+		initMultipleRedis,
+		initMultipleClickhouse,
+		initMultipleMongoDB,
+	)
 }
 
 func initMultipleMySQL(_ context.Context, debugWriter, infoWriter, warnErrorFatalWriter io.Writer) {
