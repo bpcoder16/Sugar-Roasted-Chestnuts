@@ -32,4 +32,8 @@ func registerServices() {
 	cmd.RegisterService(&services.DefaultRedis{})
 	// 测试 Chestnut 基础库对应的多 Redis 实例功能
 	cmd.RegisterService(&services.MultipleRedis{})
+	// 测试 Chestnut 基础库对应的默认 DefaultClickhouse 模块
+	cmd.RegisterService(&services.DefaultClickhouse{})
+	// 测试 Chestnut 基础库对应的多 Clickhouse 实例功能
+	cmd.RegisterService(&services.MultipleClickhouse{})
 }
