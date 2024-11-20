@@ -13,17 +13,7 @@ func main() {
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
 
-	//configtest.Test(ctx, config)
-
 	bootstrap.MustInit(ctx, config)
-
-	//logtest.Test(ctx)
-
-	//mysqltest.Test(ctx)
-	//mysqltest.MultipleTest(ctx)
-
-	//redistest.Test(ctx)
-	//redistest.MultipleTest(ctx)
 
 	//clickhousetest.Test(ctx)
 	//clickhousetest.MultipleTest(ctx)
