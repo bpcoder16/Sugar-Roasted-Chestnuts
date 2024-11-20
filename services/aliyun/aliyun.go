@@ -18,8 +18,4 @@ func ImageTransferTest(ctx context.Context) {
 	if err != nil {
 		logit.Context(ctx).WarnW("aliyunImageTransfer.Err", err)
 	}
-
-	//var signURL string
-	//signURL, err = oss.SignURL(targetOSSPath, 10)
-	//logit.Context(ctx).InfoW("signURL", signURL, "err", err)
 }

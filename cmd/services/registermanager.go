@@ -22,5 +22,7 @@ func RegisterServices() {
 	// 测试 Chestnut 基础库对应的多 MongoDB 实例功能
 	cmd.RegisterService(&MultipleMongoDB{})
 	// 测试 Chestnut 基础库对应的 ImageTransfer 模块
-	cmd.RegisterService(&ImageTransfer{})
+	cmd.RegisterService(&AliyunOSSImageTransfer{})
+	// 测试 Chestnut 基础库对应的 AliyunOSSSignURL 模块
+	cmd.RegisterService(&AliyunOSSSignURL{})
 }
