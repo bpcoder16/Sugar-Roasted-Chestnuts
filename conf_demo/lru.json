@@ -1,0 +1,9 @@
+{
+  "default": {
+    "size": 5
+  },
+  "expire": {
+    "size": 5,
+    "ttlMillisecond": 10000
+  }
+}

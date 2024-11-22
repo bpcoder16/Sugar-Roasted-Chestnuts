@@ -25,4 +25,8 @@ func RegisterServices() {
 	cmd.RegisterService(&AliyunOSSImageTransfer{})
 	// 测试 Chestnut 基础库对应的 AliyunOSSSignURL 模块
 	cmd.RegisterService(&AliyunOSSSignURL{})
+	// 测试 Chestnut 基础库对应的 LRUCache 模块
+	cmd.RegisterService(&LRUCache{})
+	// 测试 Chestnut 基础库对应的 LRUCacheExpire 模块
+	cmd.RegisterService(&LRUCacheExpire{})
 }
