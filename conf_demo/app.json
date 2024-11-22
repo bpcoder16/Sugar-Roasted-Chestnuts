@@ -9,6 +9,8 @@
   "filterValues": [
     "bpcoder"
   ],
+  "logDir": "",
+  "notUseRotateLog": false,
   "StdRedirectFileSupport": true,
   "DefaultMySQLSupport": true,
   "DefaultClickhouseSupport": true,
