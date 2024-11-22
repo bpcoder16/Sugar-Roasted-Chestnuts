@@ -5,8 +5,8 @@ import (
 	"Sugar-Roasted-Chestnuts/cron/services"
 	"context"
 	"github.com/bpcoder16/Chestnut/core/cdefer"
-	"github.com/bpcoder16/Chestnut/core/cron"
 	"github.com/bpcoder16/Chestnut/modules/appconfig"
+	"github.com/bpcoder16/Chestnut/modules/cron"
 )
 
 func main() {

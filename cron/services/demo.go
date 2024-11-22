@@ -1,8 +1,8 @@
 package services
 
 import (
-	"github.com/bpcoder16/Chestnut/core/cron"
 	"github.com/bpcoder16/Chestnut/logit"
+	"github.com/bpcoder16/Chestnut/modules/cron"
 )
 
 type Demo struct {

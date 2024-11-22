@@ -1,6 +1,6 @@
 package services
 
-import "github.com/bpcoder16/Chestnut/core/cmd"
+import "github.com/bpcoder16/Chestnut/modules/cmd"
 
 func RegisterServices() {
 	// 测试 Chestnut 基础库对应的 logit 模块

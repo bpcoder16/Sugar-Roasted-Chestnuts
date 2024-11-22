@@ -1,6 +1,6 @@
 package services
 
-import "github.com/bpcoder16/Chestnut/core/cron"
+import "github.com/bpcoder16/Chestnut/modules/cron"
 
 func RegisterServices() {
 	//cron.RegisterCron("Demo1", &Demo{})

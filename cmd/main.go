@@ -5,8 +5,8 @@ import (
 	"Sugar-Roasted-Chestnuts/cmd/services"
 	"context"
 	"github.com/bpcoder16/Chestnut/core/cdefer"
-	"github.com/bpcoder16/Chestnut/core/cmd"
 	"github.com/bpcoder16/Chestnut/modules/appconfig"
+	"github.com/bpcoder16/Chestnut/modules/cmd"
 )
 
 func main() {

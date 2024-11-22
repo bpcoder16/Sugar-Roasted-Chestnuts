@@ -8,9 +8,9 @@ import (
 	"context"
 	"github.com/bpcoder16/Chestnut/bootstrap"
 	"github.com/bpcoder16/Chestnut/core/log"
+	"github.com/bpcoder16/Chestnut/core/zaplogger"
 	"github.com/bpcoder16/Chestnut/modules/appconfig"
 	"github.com/bpcoder16/Chestnut/modules/appconfig/env"
-	"github.com/bpcoder16/Chestnut/modules/zaplogger"
 	"io"
 )
 

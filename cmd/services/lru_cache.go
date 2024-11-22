@@ -2,9 +2,9 @@ package services
 
 import (
 	"context"
-	"github.com/bpcoder16/Chestnut/core/cmd"
 	"github.com/bpcoder16/Chestnut/core/lru"
 	"github.com/bpcoder16/Chestnut/logit"
+	"github.com/bpcoder16/Chestnut/modules/cmd"
 	"strconv"
 	"time"
 )

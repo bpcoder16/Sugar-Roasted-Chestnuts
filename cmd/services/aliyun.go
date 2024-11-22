@@ -5,7 +5,7 @@ import (
 	"context"
 	"fmt"
 	"github.com/bpcoder16/Chestnut/contrib/aliyun/oss"
-	"github.com/bpcoder16/Chestnut/core/cmd"
+	"github.com/bpcoder16/Chestnut/modules/cmd"
 )
 
 type AliyunOSSImageTransfer struct {
