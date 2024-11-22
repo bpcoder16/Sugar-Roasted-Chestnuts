@@ -6,11 +6,11 @@ import (
 	"gorm.io/gorm"
 )
 
-var defaultClickhouseTest01GormDBManager *clickhouse.GormDBManager
-var defaultClickhouseTest02GormDBManager *clickhouse.GormDBManager
+var defaultClickhouseTest01GormDBManager *clickhouse.Manager
+var defaultClickhouseTest02GormDBManager *clickhouse.Manager
 
 func SetTest01Manager(configPath string, logger *log.Helper) {
-	defaultClickhouseTest01GormDBManager = clickhouse.NewGormDBManager(configPath, logger)
+	defaultClickhouseTest01GormDBManager = clickhouse.NewManager(configPath, logger)
 }
 
 func Test01MasterDB() *gorm.DB {
@@ -22,7 +22,7 @@ func Test01SlaveDB() *gorm.DB {
 }
 
 func SetTest02Manager(configPath string, logger *log.Helper) {
-	defaultClickhouseTest02GormDBManager = clickhouse.NewGormDBManager(configPath, logger)
+	defaultClickhouseTest02GormDBManager = clickhouse.NewManager(configPath, logger)
 }
 
 func Test02MasterDB() *gorm.DB {

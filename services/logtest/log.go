@@ -2,8 +2,8 @@ package logtest
 
 import (
 	"context"
+	"github.com/bpcoder16/Chestnut/appconfig/env"
 	"github.com/bpcoder16/Chestnut/logit"
-	"github.com/bpcoder16/Chestnut/modules/appconfig/env"
 )
 
 func Test(ctx context.Context) {

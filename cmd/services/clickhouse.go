@@ -3,7 +3,7 @@ package services
 import (
 	"Sugar-Roasted-Chestnuts/services/clickhousetest"
 	"context"
-	"github.com/bpcoder16/Chestnut/modules/cmd"
+	"github.com/bpcoder16/Chestnut/cmd"
 )
 
 type DefaultClickhouse struct {

@@ -3,7 +3,7 @@ package services
 import (
 	"Sugar-Roasted-Chestnuts/services/mysqltest"
 	"context"
-	"github.com/bpcoder16/Chestnut/modules/cmd"
+	"github.com/bpcoder16/Chestnut/cmd"
 )
 
 type DefaultMySQL struct {

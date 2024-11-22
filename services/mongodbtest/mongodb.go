@@ -18,7 +18,7 @@ func Test(ctx context.Context) {
 			{"$ne", nil},
 		}},
 	}
-	cursor, err := mongodb.DefaultClient().Collection("xxx").Find(
+	cursor, err := mongodb.DefaultClient().Collection("ebay_detail").Find(
 		ctx,
 		filter,
 		options.Find().SetSort(bson.D{{"_id", 1}}).SetLimit(2),

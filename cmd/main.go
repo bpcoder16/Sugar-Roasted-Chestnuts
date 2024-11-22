@@ -4,9 +4,9 @@ import (
 	"Sugar-Roasted-Chestnuts/bootstrap"
 	"Sugar-Roasted-Chestnuts/cmd/services"
 	"context"
+	"github.com/bpcoder16/Chestnut/appconfig"
+	"github.com/bpcoder16/Chestnut/cmd"
 	"github.com/bpcoder16/Chestnut/core/cdefer"
-	"github.com/bpcoder16/Chestnut/modules/appconfig"
-	"github.com/bpcoder16/Chestnut/modules/cmd"
 )
 
 func main() {

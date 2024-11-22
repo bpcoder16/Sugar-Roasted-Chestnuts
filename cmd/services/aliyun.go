@@ -4,8 +4,8 @@ import (
 	"Sugar-Roasted-Chestnuts/services/aliyun"
 	"context"
 	"fmt"
+	"github.com/bpcoder16/Chestnut/cmd"
 	"github.com/bpcoder16/Chestnut/contrib/aliyun/oss"
-	"github.com/bpcoder16/Chestnut/modules/cmd"
 )
 
 type AliyunOSSImageTransfer struct {

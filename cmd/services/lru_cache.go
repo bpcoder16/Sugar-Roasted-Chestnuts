@@ -2,9 +2,9 @@ package services
 
 import (
 	"context"
-	"github.com/bpcoder16/Chestnut/core/lru"
+	"github.com/bpcoder16/Chestnut/cmd"
 	"github.com/bpcoder16/Chestnut/logit"
-	"github.com/bpcoder16/Chestnut/modules/cmd"
+	"github.com/bpcoder16/Chestnut/lru"
 	"strconv"
 	"time"
 )
@@ -19,9 +19,9 @@ func (l *LRUCache) Description() string {
 
 func (l *LRUCache) Run(ctx context.Context, _ []string) {
 	for i := 0; i < 10; i++ {
-		lru.DefaultLRUCache.Add(strconv.Itoa(i), i)
+		lru.DefaultLRUCache().Add(strconv.Itoa(i), i)
 	}
-	logit.Context(ctx).DebugW("LRUCache.Len", lru.DefaultLRUCache.Len())
+	logit.Context(ctx).DebugW("LRUCache.Len", lru.DefaultLRUCache().Len())
 }
 
 type LRUCacheExpire struct {
@@ -34,8 +34,8 @@ func (l *LRUCacheExpire) Description() string {
 
 func (l *LRUCacheExpire) Run(ctx context.Context, _ []string) {
 	for i := 0; i < 10; i++ {
-		lru.DefaultExpireLRUCache.Add(strconv.Itoa(i), i)
+		lru.DefaultExpireLRUCache().Add(strconv.Itoa(i), i)
 	}
-	logit.Context(ctx).DebugW("LRUCache.Len", lru.DefaultLRUCache.Len())
+	logit.Context(ctx).DebugW("LRUCache.Len", lru.DefaultExpireLRUCache().Len())
 	time.Sleep(time.Minute)
 }

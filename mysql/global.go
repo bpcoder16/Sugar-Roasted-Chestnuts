@@ -6,11 +6,11 @@ import (
 	"gorm.io/gorm"
 )
 
-var defaultMySQLTest01GormDBManager *mysql.GormDBManager
-var defaultMySQLTest02GormDBManager *mysql.GormDBManager
+var defaultMySQLTest01GormDBManager *mysql.Manager
+var defaultMySQLTest02GormDBManager *mysql.Manager
 
 func SetTest01Manager(configPath string, logger *log.Helper) {
-	defaultMySQLTest01GormDBManager = mysql.NewGormDBManager(configPath, logger)
+	defaultMySQLTest01GormDBManager = mysql.NewManager(configPath, logger)
 }
 
 func Test01MasterDB() *gorm.DB {
@@ -22,7 +22,7 @@ func Test01SlaveDB() *gorm.DB {
 }
 
 func SetTest02Manager(configPath string, logger *log.Helper) {
-	defaultMySQLTest02GormDBManager = mysql.NewGormDBManager(configPath, logger)
+	defaultMySQLTest02GormDBManager = mysql.NewManager(configPath, logger)
 }
 
 func Test02MasterDB() *gorm.DB {
