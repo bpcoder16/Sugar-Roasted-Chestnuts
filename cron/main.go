@@ -2,10 +2,10 @@ package main
 
 import (
 	"Sugar-Roasted-Chestnuts/bootstrap"
-	"Sugar-Roasted-Chestnuts/cmd/services"
+	"Sugar-Roasted-Chestnuts/cron/services"
 	"context"
 	"github.com/bpcoder16/Chestnut/core/cdefer"
-	"github.com/bpcoder16/Chestnut/core/cmd"
+	"github.com/bpcoder16/Chestnut/core/cron"
 	"github.com/bpcoder16/Chestnut/modules/appconfig"
 )
 
@@ -18,7 +18,7 @@ func main() {
 	bootstrap.MustInit(ctx, config)
 	defer cdefer.Defer()
 
-	cmd.InitRootCmd(ctx)
+	// 强依赖 Redis 支持
 	services.RegisterServices()
-	cmd.Run()
+	cron.Run(ctx)
 }
