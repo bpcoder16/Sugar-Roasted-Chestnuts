@@ -3,7 +3,7 @@ package main
 import (
 	"Sugar-Roasted-Chestnuts/bootstrap"
 	"context"
-	"github.com/bpcoder16/Chestnut/modules/appconfig"
+	"github.com/bpcoder16/Chestnut/appconfig"
 )
 
 func main() {

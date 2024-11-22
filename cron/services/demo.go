@@ -1,12 +1,9 @@
 package services
 
 import (
-	"Sugar-Roasted-Chestnuts/services/clickhousetest"
-	"Sugar-Roasted-Chestnuts/services/logtest"
-	"Sugar-Roasted-Chestnuts/services/mongodbtest"
-	"Sugar-Roasted-Chestnuts/services/mysqltest"
-	"Sugar-Roasted-Chestnuts/services/redistest"
+	"context"
 	"github.com/bpcoder16/Chestnut/cron"
+	"github.com/bpcoder16/Chestnut/logit"
 )
 
 type Demo struct {
@@ -14,9 +11,14 @@ type Demo struct {
 }
 
 func (d *Demo) Process() {
-	logtest.Test(d.Ctx)
-	mysqltest.Test(d.Ctx)
-	redistest.Test(d.Ctx)
-	mongodbtest.Test(d.Ctx)
-	clickhousetest.Test(d.Ctx)
+	for i := 0; i < 2; i++ {
+		d.AddProcessAddTaskList(func(ctx context.Context) {
+			logit.Context(ctx).InfoW("xxx", "xxx")
+		})
+	}
+	//logtest.Test(d.Ctx)
+	//mysqltest.Test(d.Ctx)
+	//redistest.Test(d.Ctx)
+	//mongodbtest.Test(d.Ctx)
+	//clickhousetest.Test(d.Ctx)
 }

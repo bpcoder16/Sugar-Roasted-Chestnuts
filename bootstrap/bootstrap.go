@@ -5,13 +5,18 @@ import (
 	"Sugar-Roasted-Chestnuts/mongodb"
 	"Sugar-Roasted-Chestnuts/mysql"
 	"Sugar-Roasted-Chestnuts/redis"
+	"bytes"
 	"context"
+	"fmt"
 	"github.com/bpcoder16/Chestnut/appconfig"
 	"github.com/bpcoder16/Chestnut/appconfig/env"
 	"github.com/bpcoder16/Chestnut/bootstrap"
 	"github.com/bpcoder16/Chestnut/core/log"
+	"github.com/bpcoder16/Chestnut/logit"
+	"github.com/bpcoder16/Chestnut/modules/concurrency"
 	"github.com/bpcoder16/Chestnut/modules/zaplogger"
 	"io"
+	"runtime"
 )
 
 func MustInit(ctx context.Context, config *appconfig.AppConfig) {
@@ -23,6 +28,7 @@ func MustInit(ctx context.Context, config *appconfig.AppConfig) {
 		//initMultipleClickhouse,
 		//initMultipleMongoDB,
 	)
+	initConcurrencyManager(ctx)
 }
 
 func initMultipleMySQL(_ context.Context, debugWriter, infoWriter, warnErrorFatalWriter io.Writer) {
@@ -155,4 +161,13 @@ func initMultipleMongoDB(ctx context.Context, debugWriter, infoWriter, warnError
 			//}),
 		),
 	))
+}
+
+func initConcurrencyManager(_ context.Context) {
+	concurrency.Init(func(re interface{}) {
+		trace := make([]byte, 4096)
+		n := runtime.Stack(trace[:], false)
+		title := fmt.Sprintf("panic:%v", re)
+		logit.ErrorW("panic_title", title, "panic_trace", string(bytes.ReplaceAll(trace[:n], []byte("\n"), []byte("\\n"))))
+	})
 }
