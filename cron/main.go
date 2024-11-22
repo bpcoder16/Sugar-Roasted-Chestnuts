@@ -4,9 +4,9 @@ import (
 	"Sugar-Roasted-Chestnuts/bootstrap"
 	"Sugar-Roasted-Chestnuts/cron/services"
 	"context"
+	"github.com/bpcoder16/Chestnut/appconfig"
 	"github.com/bpcoder16/Chestnut/core/cdefer"
-	"github.com/bpcoder16/Chestnut/modules/appconfig"
-	"github.com/bpcoder16/Chestnut/modules/cron"
+	"github.com/bpcoder16/Chestnut/cron"
 )
 
 func main() {
