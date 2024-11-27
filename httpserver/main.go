@@ -26,6 +26,7 @@ func main() {
 		gin.HTTPHandler(
 			route.Api(),
 			route.ApiV2(),
+			route.WebSocket(),
 		),
 	).Run()
 }

@@ -5,7 +5,7 @@ import (
 	"github.com/bpcoder16/Chestnut/contrib/httphandler/gin"
 )
 
-func Api() *gin.DefaultRouter {
+func Api() gin.Router {
 	apiRouter := gin.NewDefaultRouter("/api")
 
 	apiRouter.GET("/test", (&api.Test{}).Test)
@@ -18,7 +18,7 @@ func Api() *gin.DefaultRouter {
 	return apiRouter
 }
 
-func ApiV2() *gin.DefaultRouter {
+func ApiV2() gin.Router {
 	apiRouter := gin.NewDefaultRouter("/api/v2")
 
 	apiRouter.GET("/test", (&api.Test{}).Test)
