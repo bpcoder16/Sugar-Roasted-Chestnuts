@@ -1,6 +1,8 @@
 package route
 
 import (
+	"Sugar-Roasted-Chestnuts/httpserver/websocket"
+	"github.com/bpcoder16/Chestnut/appconfig/env"
 	"github.com/bpcoder16/Chestnut/contrib/httphandler/gin"
 	"github.com/bpcoder16/Chestnut/modules/ginwebsocket"
 )
@@ -8,7 +10,8 @@ import (
 func WebSocket() gin.Router {
 	webSocket := ginwebsocket.NewRouter(
 		"/v1",
-		"/conf/websocket.json",
+		env.RootPath()+"/conf/websocket.json",
 	)
+	webSocket.OnTextMessageController("test", &websocket.Test{})
 	return webSocket
 }
