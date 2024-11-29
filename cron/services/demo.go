@@ -7,13 +7,21 @@ import (
 )
 
 type Demo struct {
-	cron.Base
+	Base
+	Desc string
+}
+
+func (d *Demo) Init(s cron.Interface) {
+	d.Base.Init(s)
+	if b, ok := s.(*Demo); ok && b != nil {
+		d.Desc = b.Desc
+	}
 }
 
 func (d *Demo) Process() {
 	for i := 0; i < 2; i++ {
 		d.AddProcessAddTaskList(func(ctx context.Context) {
-			logit.Context(ctx).InfoW("xxx", "xxx")
+			logit.Context(ctx).InfoW("xxx", "xxx", "desc", d.Desc)
 		})
 	}
 	//logtest.Test(d.Ctx)
