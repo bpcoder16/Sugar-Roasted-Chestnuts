@@ -31,6 +31,8 @@ func RegisterServices() {
 	cmd.RegisterService(&LRUCacheExpire{})
 	// 测试 Chestnut 基础库对应的 Concurrency 模块
 	cmd.RegisterService(&ConcurrencyTest{})
+	// 测试 Chestnut 基础库对应的 PubSub 模块
+	cmd.RegisterService(&PubSub{})
 	// 测试各种临时功能代码
 	cmd.RegisterService(&Demo{})
 }
