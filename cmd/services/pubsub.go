@@ -5,6 +5,7 @@ import (
 	"context"
 	"github.com/bpcoder16/Chestnut/cmd"
 	"github.com/bpcoder16/Chestnut/contrib/websocket"
+	"github.com/bpcoder16/Chestnut/logit"
 )
 
 type PubSub struct {
@@ -16,6 +17,7 @@ func (p *PubSub) Description() string {
 }
 
 func (p *PubSub) Run(ctx context.Context, _ []string) {
+	logit.Context(ctx).DebugW("xxx", "xxx")
 	pubsub.RedisPublish(ctx, pubsub.Message{
 		Code: 0,
 		State: websocket.State{
