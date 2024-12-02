@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	config := appconfig.MustLoadAppConfig()
+	config := appconfig.MustLoadAppConfig("/conf/app.json")
 
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()

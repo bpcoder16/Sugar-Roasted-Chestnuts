@@ -2,7 +2,7 @@ module Sugar-Roasted-Chestnuts
 
 go 1.21
 
-//replace github.com/bpcoder16/Chestnut v0.1.4 => ../Chestnut
+replace github.com/bpcoder16/Chestnut v0.1.5 => ../Chestnut
 
 require (
 	github.com/bpcoder16/Chestnut v0.1.5
