@@ -1,7 +1,9 @@
 {
   "env": {
-    "appName": "Sugar-Roasted-Chestnuts",
-    "runMode": "debug"
+    "appName": "Chestnut",
+    "runMode": "debug",
+    "timeLocation": "Asia/Shanghai",
+    "configDirName": ""
   },
   "filterKeys": [
     "password"
@@ -14,5 +16,5 @@
   "DefaultRedisSupport": true,
   "DefaultMongoDBSupport": true,
   "AliyunOSSSupport": true,
-  "UseLruCache": true
+  "UseLRUCache": false
 }

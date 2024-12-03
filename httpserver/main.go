@@ -28,7 +28,7 @@ func main() {
 	var g *gtask.Group
 	g, ctx = gtask.WithContext(ctx)
 	g.Go(func() error {
-		httpserver.NewManager(
+		return httpserver.NewManager(
 			path.Join(env.RootPath(), "conf/http.json"),
 			gin.HTTPHandler(
 				route.Api(),
@@ -36,7 +36,6 @@ func main() {
 				routeWebSocket,
 			),
 		).Run()
-		return nil
 	})
 	g.Go(func() error {
 		return pubsub.RedisSubscribe(ctx, routeWebSocket.GetClientManager())
