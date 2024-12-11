@@ -6,6 +6,7 @@ import (
 	"github.com/bpcoder16/Chestnut/logit"
 	"github.com/gin-gonic/gin"
 	"net/http"
+	"time"
 )
 
 type Test struct{}
@@ -14,6 +15,7 @@ func (t *Test) Test(ctx *gin.Context) {
 	logit.Context(ctx).InfoW("Test", "Test")
 
 	asynctask.AddQueue(ctx, func(ctxQ context.Context) error {
+		time.Sleep(5 * time.Second)
 		logit.Context(ctxQ).DebugW("Test", "Test")
 		return nil
 	}, "测试 ErrMsg")
