@@ -18,7 +18,7 @@ func (d *Demo) Init(s cron.Interface) {
 	}
 }
 
-func (d *Demo) Process() {
+func (d *Demo) Process(ctx context.Context) {
 	for i := 0; i < 2; i++ {
 		d.AddProcessAddTaskList(func(ctx context.Context) {
 			logit.Context(ctx).InfoW("xxx", "xxx", "desc", d.Desc)

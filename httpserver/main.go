@@ -8,6 +8,7 @@ import (
 	"github.com/bpcoder16/Chestnut/appconfig"
 	"github.com/bpcoder16/Chestnut/appconfig/env"
 	"github.com/bpcoder16/Chestnut/contrib/httphandler/gin"
+	"github.com/bpcoder16/Chestnut/core/asynctask"
 	"github.com/bpcoder16/Chestnut/core/cdefer"
 	"github.com/bpcoder16/Chestnut/core/gtask"
 	"github.com/bpcoder16/Chestnut/modules/httpserver"
@@ -40,6 +41,12 @@ func main() {
 	g.Go(func() error {
 		return pubsub.RedisSubscribe(ctx, routeWebSocket.GetClientManager())
 	})
+
+	for i := 0; i < 888; i++ {
+		g.Go(func() error {
+			return asynctask.Consumer(ctx)
+		})
+	}
 
 	_ = g.Wait()
 }

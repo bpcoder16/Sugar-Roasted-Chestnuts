@@ -5,8 +5,10 @@ import (
 	"Sugar-Roasted-Chestnuts/cron/services"
 	"context"
 	"github.com/bpcoder16/Chestnut/appconfig"
+	"github.com/bpcoder16/Chestnut/appconfig/env"
 	"github.com/bpcoder16/Chestnut/core/cdefer"
 	"github.com/bpcoder16/Chestnut/cron"
+	"path"
 )
 
 func main() {
@@ -20,5 +22,5 @@ func main() {
 
 	// 强依赖 Redis 支持
 	services.RegisterServices()
-	cron.Run(ctx)
+	cron.Run(ctx, path.Join(env.ConfigDirPath(), "cron.json"))
 }

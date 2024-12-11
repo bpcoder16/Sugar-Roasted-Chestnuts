@@ -2,10 +2,10 @@ module Sugar-Roasted-Chestnuts
 
 go 1.21
 
-replace github.com/bpcoder16/Chestnut v0.1.5 => ../Chestnut
+replace github.com/bpcoder16/Chestnut v1.0.0 => ../Chestnut
 
 require (
-	github.com/bpcoder16/Chestnut v0.1.5
+	github.com/bpcoder16/Chestnut v1.0.0
 	github.com/gin-gonic/gin v1.10.0
 	github.com/redis/go-redis/v9 v9.7.0
 	go.mongodb.org/mongo-driver v1.17.1
